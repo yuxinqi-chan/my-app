@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>桌面悬浮窗</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="drag-handle" class="drag-handle" title="拖拽窗口"></div>
+      <canvas id="canvas"></canvas>
+      <!-- AI回复气泡 - 显示在头顶 -->
+      <div id="ai-bubble" class="ai-bubble hidden">
+        <div class="bubble-text">这是AI的回复内容</div>
+      </div>
+      <!-- 输入框容器 - 默认隐藏 -->
+      <div id="input-container" class="input-container hidden">
+        <input
+          type="text"
+          id="user-input"
+          class="user-input"
+          placeholder="说点什么吧..."
+          autocomplete="off"
+        />
+        <button id="send-btn" class="send-btn">发送</button>
+      </div>
+    </div>
+    <script src="/live2d/live2d.min.js"></script>
+    <script src="/live2d/live2dcubismcore.min.js"></script>
+    <script type="module" src="/src/renderer/renderer.ts"></script>
+  </body>
+</html>
